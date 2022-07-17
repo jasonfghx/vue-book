@@ -73,3 +73,5 @@ const vm = Vue.createApp({
 }).mount('#app');
 
 </script>
+
+https://book.vue.tw/CH1/1-5-events.html
