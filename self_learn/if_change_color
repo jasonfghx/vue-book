@@ -1,0 +1,75 @@
+<script src="https://unpkg.com/vue@next"></script>
+<!-- https://unpkg.com/vue@next -->
+
+<!-- <div id="app">
+  {{ message }}
+</div>
+
+<script type="text/javascript">
+
+
+const vm = Vue.createApp({
+	  data () {
+	  	  return {
+	  	  	 message: 'Hello Vue 3.0!'
+	  	  	}
+	  	  }
+	  	});
+	  	vm.mount('#app');
+
+</script> -->
+<style>
+	#app {
+  display: block;  
+  padding: 1rem;
+}
+
+h4 {
+  margin-bottom: 1rem;
+}
+
+button {
+  margin-right: 1em;
+}
+
+.wrap {
+  display: block;
+  overflow: hidden;
+  margin-top: 2rem;
+
+  div {
+    float: left;
+    margin-right: 2rem;
+    display: block;
+    width: 100px;
+    height: 100px;
+    line-height: 100px;
+    text-align: center;
+    color: #fff;
+    font-size: 1rem;
+  }
+}
+</style>
+<div id="app">
+  <h4>count: {{ count }}</h4>
+  <button @click="count++">Plus</button>
+  <button @click="count = 0">Reset</button>
+
+  <div class="wrap">
+    <div v-if="count === 0" style="background-color: #f00;">Block A</div>
+    <div v-else-if="count < 5" style="background-color: green">Block B</div>
+    <div v-else style="background-color: #00f;">Block C</div>
+  </div>
+</div>
+
+<!--js-->
+<script>
+const vm = Vue.createApp({
+  data: () => {
+    return {
+      count: 0
+    }
+  },
+}).mount('#app');
+
+</script>
